@@ -10,12 +10,9 @@ var PORT = process.argv.env || 3033;
 app.use(bodyParser.urlencoded({ extended: true}));
 app.use(bodyParser.json());
 
-
 app.use("/api", apiRoutes);
 
-
 app.use("/", htmlRoutes);
-
 
 app.listen(PORT, function(){
     console.log("App listening on PORT " + PORT);
